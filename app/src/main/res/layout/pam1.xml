@@ -13,12 +13,12 @@
         <TextView
             android:id="@+id/textView3"
             style="@style/pam1_normal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView4"
             android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/textView4"
+            android:gravity="center"
             android:text="REPENT! Quit Your JOB! ¡SLACK OFF!"
+            android:textSize="24sp"
             android:textStyle="bold"/>
 
         <TextView
@@ -31,8 +31,7 @@
             android:layout_marginTop="47dp"
             android:text="The World Ends Tomorrow and"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:typeface="serif"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/textView5"
@@ -44,7 +43,7 @@
             android:text="YOU"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:typeface="serif"/>
+            />
 
         <TextView
             android:id="@+id/textView4"
@@ -57,7 +56,7 @@
             android:text="MAY DIE!"
             android:textSize="48sp"
             android:textStyle="bold"
-            android:typeface="serif"/>
+            />
 
         <TextView
             android:id="@+id/textViewPROBNOT"
@@ -70,7 +69,7 @@
             android:text="Well, no, probably not...but whatever you do, just keep reading!"
             android:textSize="10sp"
             android:textStyle="bold"
-            android:typeface="serif"/>
+            />
 
         <!-- ARE WE CONTROLLED BY ALIEN FORCES -->
         <LinearLayout
@@ -93,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="ARE WE CONTROLLED BY"
-                    android:typeface="serif"/>
+                    />
 
                 <TextView
                     style="@style/pam1_normal"
@@ -102,7 +101,7 @@
                     android:gravity="center"
                     android:text="SECRET FORCES?"
                     android:textStyle="bold"
-                    android:typeface="serif"/>
+                    />
             </LinearLayout>
 
             <ImageView
@@ -146,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="ARE ALIEN SPACE MONSTERS BRINGING"
-                    android:typeface="serif"/>
+                    />
 
                 <TextView
                     style="@style/pam1_normal"
@@ -155,11 +154,12 @@
                     android:gravity="center"
                     android:text="A STARTLING NEW WORLD?"
                     android:textStyle="bold"
-                    android:typeface="serif"/>
+                    />
             </LinearLayout>
         </LinearLayout>
         <!-- DO PEOPLE THINK YOU'RE STRANGE? -->
         <LinearLayout
+            android:id="@+id/pam1_block_strange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/pam1_block_arealienmonsters"
@@ -178,7 +178,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="DO PEOPLE THINK YOU'RE STRANGE?"
-                    android:typeface="serif"/>
+                    />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -193,7 +193,7 @@
                         android:gravity="center"
                         android:text="DO "
                         android:textStyle="bold"
-                        android:typeface="serif"/>
+                        />
 
                     <TextView
                         style="@style/pam1_normal"
@@ -202,7 +202,7 @@
                         android:gravity="center"
                         android:text="YOU?"
                         android:textStyle="bold|italic"
-                        android:typeface="serif"/>
+                        />
 
                 </LinearLayout>
 
@@ -215,7 +215,7 @@
                     android:text="...THEN YOU MAY BE ON THE RIGHT TRACK!"
                     android:textSize="10sp"
                     android:textStyle="bold"
-                    android:typeface="serif"/>
+                    />
 
             </LinearLayout>
 
@@ -228,5 +228,13 @@
                 android:maxWidth="75dp"
                 android:src="@drawable/pam1_walking"/>
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pam1_block_strange"
+            android:onClick="btnLaunchSite"
+            android:text="Learn more at SubGenius.com!"
+            />
     </RelativeLayout>
 </ScrollView>

@@ -1,5 +1,7 @@
 package com.bytestemplar.slackboard;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -65,21 +67,21 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected( MenuItem item )
-    {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if ( id == R.id.action_settings ) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected( item );
-    }
+//    @Override
+//    public boolean onOptionsItemSelected( MenuItem item )
+//    {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if ( id == R.id.action_settings ) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected( item );
+//    }
 
     @SuppressWarnings( "StatementWithEmptyBody" )
     @Override
@@ -89,10 +91,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if ( id == R.id.nav_about_church ) {
-
+            Intent i = new Intent( this, Pamphlet1Activity.class );
+            startActivity( i );
         }
         else if ( id == R.id.nav_get_right_with_bob ) {
-
+            Intent i = new Intent( Intent.ACTION_VIEW );
+            i.setData( Uri.parse( "http://www.subgenius.com/scatalog/membership.htm" ) );
+            startActivity( i );
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
@@ -100,7 +105,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void onClickBobRandom(View v)
+    public void onClickBobRandom( View v )
     {
         Log.e( "BT", "Bob?" );
     }

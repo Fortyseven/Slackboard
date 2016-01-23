@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.bytestemplar.slackboard"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.bytestemplar.slackboard"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Pamphlet1Activity"
+            android:label="Pamphlet No. 1"/>
     </application>
 
 </manifest>
